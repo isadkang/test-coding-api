@@ -2,7 +2,7 @@
 ## Interaction with API 
 
 ```javascript
-    PUBLIC_API_POKEAPI = '[API](https://pokeapi.co/api/v2/berry)'
+    PUBLIC_API_POKEAPI = 'https://pokeapi.co/api/v2/berry'
 ```
 
 ### Tugas Sederhana
