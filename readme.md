@@ -2,7 +2,7 @@
 ## Interaction with API 
 
 ```javascript
-    endPoint = 'http://(https://pokeapi.co/api/v2/berry)'
+    PUBLIC_API_POKEAPI = '[http://](https://pokeapi.co/api/v2/berry)''
 ```
 
 ### Tugas Sederhana
