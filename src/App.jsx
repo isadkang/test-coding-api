@@ -7,21 +7,21 @@ function App() {
   const [userSelect, setUserSelect] = useState("") // State untuk menampung pilihan dari pengguna yang diambil dari API
   const [isShow, setIsShow] = useState(false) // State untuk tombol menampilkan pilihan / select pengguna
 
-  const getBerries = async () => {
-    const berries = await fetch("https://pokeapi.co/api/v2/berry") // Mengambil data berry dari API
-    const value = await berries.json() // Mengonversi data berry menjadi objek JSON
+  const getItems = async () => {
+    const items = await fetch("https://pokeapi.co/api/v2/item") // Mengambil data item dari API
+    const value = await items.json() // Mengonversi data item menjadi objek JSON
     let result = value.results.map(data => {
       return {
-        label: data.name, // Menyimpan nama berry sebagai label
-        value: data.name, // Menyimpan nama berry sebagai value
+        label: data.name, // Menyimpan nama item sebagai label
+        value: data.name, // Menyimpan nama item sebagai value
       }
     })
-    setDatas(result.sort((a,b) => a.label.localeCompare(b.label))) // Mengupdate state 'datas' dengan hasil pengolahan data berry dari API
+    setDatas(result.sort((a,b) => a.label.localeCompare(b.label))) // Mengupdate state 'datas' dengan hasil pengolahan data item dari API
     // console.log(datas)
-  } // Fungsi untuk mengambil data dari API dan mengurutkannya secara ASCENDING (berurutan dari A - Z) berdasarkan label berry
+  } // Fungsi untuk mengambil data dari API dan mengurutkannya secara ASCENDING (berurutan dari A - Z) berdasarkan label item
 
   useEffect(() => {
-    getBerries() // Memanggil fungsi getBerries saat komponen dirender pertama kali
+    getItems() // Memanggil fungsi getBerries saat komponen dirender pertama kali
   },[]) 
 
   const handleSubmit = () => {
