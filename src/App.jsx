@@ -21,7 +21,7 @@ function App() {
   } // Fungsi untuk mengambil data dari API dan mengurutkannya secara ASCENDING (berurutan dari A - Z) berdasarkan label item
 
   useEffect(() => {
-    getItems() // Memanggil fungsi getBerries saat komponen dirender pertama kali
+    getItems() // Memanggil fungsi getItems saat komponen dirender pertama kali
   },[]) 
 
   const handleSubmit = () => {
